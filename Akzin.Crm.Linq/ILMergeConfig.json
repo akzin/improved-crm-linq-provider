@@ -1,0 +1,11 @@
+﻿{
+    "General": {
+        "KeyFile": "akzin.snk",
+        "InputAssemblies": [
+            "Remotion.Linq.dll"
+        ]
+    },
+    "Advanced": {
+        "Internalize":  true 
+    }
+}

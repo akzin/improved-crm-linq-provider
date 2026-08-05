@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Akzin.Crm.Linq</id>
+    <version>1.0.10</version>
+    <authors>Akzin.com (email: to@fik.email)</authors>
+    <owners>Akzin.com (email: to@fik.email)</owners>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>http://akzin.com/crm-linq</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Improved Linq Provider for Microsoft CRM</description>
+    <releaseNotes>Fix for using RowVersion in an anonymous object projection</releaseNotes>
+    <copyright>Copyright 2018 Akzin.com</copyright>
+    <tags>CRM LINQ</tags>
+    <dependencies>
+      <dependency id="Microsoft.CrmSdk.CoreAssemblies" version="7.0" />
+    </dependencies>
+	<references>
+      <reference file="Akzin.Crm.Linq.dll" />
+    </references>
+  </metadata>
+</package>

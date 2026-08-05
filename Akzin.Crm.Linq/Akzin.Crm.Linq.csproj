@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF1D534A-8B12-4919-8A0E-DDEF15C7B11E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Akzin.Crm.Linq</RootNamespace>
+    <AssemblyName>Akzin.Crm.Linq</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>akzin.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.8.2.0\lib\net45\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.8.2.0\lib\net45\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fetch\DataFetcher.cs" />
+    <Compile Include="Query\IEntityNamedQueryable.cs" />
+    <Compile Include="Query\LinkEntityOrQueryExpression.cs" />
+    <Compile Include="Where\FilterExpressionStack.cs" />
+    <Compile Include="Query\QueryOptions.cs" />
+    <Compile Include="Select\AttributeAlias.cs" />
+    <Compile Include="Select\Projector.cs" />
+    <Compile Include="Select\SelectClauseArgument.cs" />
+    <Compile Include="Select\SelectClauseVisitor.cs" />
+    <Compile Include="Where\FilterExpressionTreeVisitor.cs" />
+    <Compile Include="Extensions\NamingExtensions.cs" />
+    <Compile Include="Extensions\OrganizationServiceExtensions.cs" />
+    <None Include="akzin.snk" />
+    <None Include="ILMergeConfig.json" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\Queryable.cs" />
+    <Compile Include="Query\QueryExecutor.cs" />
+    <Compile Include="Query\QueryModelVisitor.cs" />
+    <Compile Include="ThirdParty\Relinq\*.cs" />
+    <Compile Include="ThirdParty\Relinq\App_Packages\Remotion.JetBrains.Annotations.Sources.1.15.23.0\*.cs" />
+    <Compile Include="ThirdParty\Relinq\App_Packages\Remotion.Utilities.ArgumentUtility.Sources.1.15.23.0\*.cs" />
+    <Compile Include="ThirdParty\Relinq\App_Packages\Remotion.Utilities.Assertion.Sources.1.15.23.0\*.cs" />
+    <Compile Include="ThirdParty\Relinq\App_Packages\Remotion.Utilities.NullableTypeUtility.Sources.1.15.23.0\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Clauses\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Clauses\ExpressionVisitors\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Clauses\Expressions\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Clauses\ResultOperators\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Clauses\StreamedData\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Collections\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Parsing\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Parsing\ExpressionVisitors\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Parsing\ExpressionVisitors\MemberBindings\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Parsing\ExpressionVisitors\Transformation\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Parsing\ExpressionVisitors\Transformation\PredefinedTransformations\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Parsing\ExpressionVisitors\TreeEvaluation\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Parsing\Structure\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Parsing\Structure\ExpressionTreeProcessors\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Parsing\Structure\IntermediateModel\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Parsing\Structure\NodeTypeProviders\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Transformations\*.cs" />
+    <Compile Include="ThirdParty\Relinq\Utilities\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="ThirdParty\Relinq\LICENSE.txt" />
+    <None Include="ThirdParty\Relinq\README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,1 @@
+ilmerge /target:dll /out:Folder\lib\net45\Akzin.Crm.Linq.dll /ndebug /keyfile:..\Akzin.Crm.Linq\akzin.snk /internalize:exclude.txt ..\Akzin.Crm.Linq\bin\Release\Akzin.Crm.Linq.dll ..\Akzin.Crm.Linq\bin\Release\Remotion.Linq.dll
